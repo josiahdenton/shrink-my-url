@@ -8,6 +8,7 @@ use tower_http::services::ServeFile;
 pub fn setup_routes() -> Router {
     Router::new().route("/", routing::get(routes::index))
         .nest_service("/styles.css", ServeFile::new("templates/styles/styles.css"))
+        .nest_service("/htmx.min.js", ServeFile::new("templates/scripts/htmx.min.js"))
 }
 
 pub fn setup_logging() -> Result<flexi_logger::LoggerHandle, flexi_logger::FlexiLoggerError> {
