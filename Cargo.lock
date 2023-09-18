@@ -826,6 +826,8 @@ dependencies = [
  "askama_axum",
  "axum",
  "flexi_logger",
+ "log",
+ "serde",
  "tokio",
  "tower-http",
 ]
