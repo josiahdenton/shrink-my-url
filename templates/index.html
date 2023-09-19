@@ -9,8 +9,10 @@
     </head>
     <body>
         <h1 class="text-3xl font-bold underline">
-            Hello, {{ name }}!
+            Hello Josiah!
         </h1>
         <button hx-post="/click" hx-swap="outerHTML">Click Me!</button>
+
+        {{ template "hello" }}
     </body>
 </html>

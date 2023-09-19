@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -p assets
+npx tailwindcss -i ./templates/main.css -o ./assets/styles.css
+curl https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js > ./assets/htmx.min.js
