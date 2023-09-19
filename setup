@@ -1,5 +1,15 @@
 #!/bin/bash
 
+HTMX=assets/htmx.min.js
+
 mkdir -p assets
+
 npx tailwindcss -i ./templates/main.css -o ./assets/styles.css
-curl https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js > ./assets/htmx.min.js
+
+if [ -f "$HTMX" ]; then
+    # consolidate these
+    printf "\n"
+    echo "$HTMX exists - no fetch"
+else
+    curl https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js > ./assets/htmx.min.js
+fi
