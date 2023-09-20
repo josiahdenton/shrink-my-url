@@ -31,6 +31,15 @@ cargo run
 ```
 and you should now have a local server running on `127.0.0.1:3000` or `localhost:3000`
 
+### Color Palette
+
+tailwind colors
+- `blue-950` : background
+- `cyan-700` : ???
+- `teal-600` : actions
+- `lime-200` : bright notifications / highlights
+- `pink-600` : warning
+
 ### Planned features
 
 - [ ] main page can take a URL and give back a "minified" URL

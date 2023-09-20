@@ -1,5 +1,6 @@
 #[tokio::main]
 async fn main() {
+    // move these steps to lib.rs
     shrink::setup_logging().expect("failed to start logger");
     let app = shrink::setup_routes();
 
