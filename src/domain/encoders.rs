@@ -2,6 +2,7 @@ use rand::Rng;
 
 use crate::domain::minify::EncodeUrl;
 
+#[derive(Debug, Clone)]
 pub struct UUIDEncoder {}
 
 const ALPHANUMERIC: &'static str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
