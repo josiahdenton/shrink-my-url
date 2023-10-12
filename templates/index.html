@@ -1,16 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="styles.css" rel="stylesheet">
-        <script src="htmx.min.js"></script>
-    </head>
-    <body>
-        <h1 class="text-3xl font-bold underline">
-            Hello, {{ name }}!
-        </h1>
-        <button hx-post="/click" hx-swap="outerHTML">Click Me!</button>
-    </body>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/styles.css" rel="stylesheet" />
+    <script src="assets/htmx.min.js"></script>
+    <!-- NOTE: alpine allows us to create interactive elements!  -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+    <style>
+        html,
+        body {
+            background-color: rgb(23 37 84);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justify-center">
+        <div class="flex flex-col justify-center w-60 h-60">
+            <img src="assets/logo.svg" />
+        </div>
+    </div>
+    <div class="flex justify-center py-8">
+        {% include "./components/minify_form.html" %}
+    </div>
+</body>
+
 </html>

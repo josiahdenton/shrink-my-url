@@ -1,0 +1,14 @@
+#! /bin/bash
+
+HTMX="assets/htmx.min.js"
+
+mkdir -p assets
+
+if [ ! -f "$HTMX" ]; then
+    curl https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js > $HTMX
+fi
+
+npx tailwindcss -i ./templates/main.css -o ./assets/styles.css
+
+cargo run
+

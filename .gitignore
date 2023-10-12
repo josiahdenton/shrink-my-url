@@ -1,3 +1,4 @@
 /target
-/templates/styles/styles.css
-/templates/scripts/*
+# ignore build assets
+/assets/htmx.min.js
+/assets/styles.css

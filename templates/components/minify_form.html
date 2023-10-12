@@ -1,0 +1,13 @@
+<div class="flex flex-col">
+    <form class="flex flex-col gap-2" hx-post="/minify" hx-target="#minify-form-status">
+        <label class="text-slate-200" for="url">URL</label>
+        <input class="border border-slate-600 rounded bg-slate-800 text-slate-200 py-2 px-4 focus:ring-blue-500"
+            name="url" />
+        <div>
+            <button class="rounded bg-blue-700 text-slate-200 font-semibold py-1 px-2 hover:bg-blue-900">
+                Minify
+            </button>
+        </div>
+    </form>
+    <div id="minify-form-status" class="flex flex-col text-slate-200"></div>
+</div>
